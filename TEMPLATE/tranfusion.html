@@ -22,7 +22,8 @@
     <div class="about">About</div>
 </section>
 
-<form action="">
+<form action="" method="POST">
+    {% csrf_token %}
     <label class="emp-id" for="emp_id">Employee_ID  :  </label>
     <input type="text" id="emp_id" name="emp_id" size="30" placeholder="Employee_ID"><br><br><br>
 
@@ -38,8 +39,8 @@
     <label class="patient-name" for="patient_name">Patient Name  :  </label>
     <input type="text" id="patient_name" name="patient_name" size="30" placeholder="Patient_Name"><br><br><br>
 
-    <label class="blood-type" for="blood_type">Blood Type : </label> 
-    <select name="blood_type" id="blood_type">
+    <label class="blood-type" for="blood_type">Blood Product Type : </label> 
+    <select name="blood_product_type" id="blood_type">
         <option value="RBCs">RBCs</option>
         <option value="Plasma">Plasma</option>
         <option value="Platelets">Platelets</option>
